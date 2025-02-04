@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\AddTab.ico" />
+    <None Remove="Resources\App.ico" />
+    <None Remove="Resources\CloseTab.ico" />
+    <None Remove="Resources\Folder.ico" />
+    <None Remove="Resources\Printing.ico" />
+    <None Remove="Resources\ReadBook.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IronPdf" Version="2024.4.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Syncfusion.Pdf.Net.Core" Version="25.1.41" />
+    <PackageReference Include="Syncfusion.PdfViewer.WPF" Version="25.1.41" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\App.ico" />
+    <Resource Include="Resources\Folder.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="SaveBooks\" />
+    <Folder Include="JsonFiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
